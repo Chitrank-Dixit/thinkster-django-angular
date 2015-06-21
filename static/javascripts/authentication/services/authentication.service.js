@@ -69,6 +69,7 @@
      * @memberOf thinkster.authentication.services.Authentication
      */
     function login(email, password) {
+      console.log("In There");
       return $http.post('/api/v1/auth/login/', {
         email: email, password: password
       }).then(loginSuccessFn, loginErrorFn);

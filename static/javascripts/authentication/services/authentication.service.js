@@ -79,6 +79,7 @@
        * @desc Set the authenticated account and redirect to index
        */
       function loginSuccessFn(data, status, headers, config) {
+        console.log(data, status, headers, config);
         Authentication.setAuthenticatedAccount(data.data);
 
         window.location = '/';

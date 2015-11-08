@@ -1,5 +1,5 @@
 from django.conf.urls import include, patterns, url
-
+from django.contrib import admin
 from rest_framework_nested import routers
 
 from authentication.views import AccountViewSet, LoginView, LogoutView
@@ -17,7 +17,7 @@ accounts_router.register(r'posts', AccountPostsViewSet)
 
 urlpatterns = patterns(
     '',
-
+    url(r'^admin/', include(admin.site.urls)),
     url(r'^api/v1/', include(router.urls)),
     url(r'^api/v1/', include(accounts_router.urls)),
     url(r'^api/v1/auth/login/$', LoginView.as_view(), name='login'),

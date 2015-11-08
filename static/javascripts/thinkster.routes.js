@@ -34,4 +34,5 @@
       templateUrl: '/static/templates/accounts/settings.html'
     }).otherwise('/');
   }
+
 })();
